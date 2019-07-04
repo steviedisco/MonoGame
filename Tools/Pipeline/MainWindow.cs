@@ -32,8 +32,6 @@ namespace MonoGame.Tools.Pipeline
             Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "mono"),
         };
 
-        int setw = 0;
-
         public MainWindow()
         {
             _pads = new List<Pad>();
@@ -127,7 +125,7 @@ namespace MonoGame.Tools.Pipeline
                 filePath = dialog.FileName;
                 if (dialog.CurrentFilter == _mgcbFileFilter && !filePath.EndsWith(".mgcb"))
                     filePath += ".mgcb";
-                
+
                 return true;
             }
 
@@ -205,7 +203,7 @@ namespace MonoGame.Tools.Pipeline
 
         public void EndTreeUpdate()
         {
-            
+
         }
 
         public void UpdateProperties()
@@ -411,7 +409,7 @@ namespace MonoGame.Tools.Pipeline
             cmdCopyAssetName.Enabled = info.CopyAssetPath;
             cmdRebuildItem.Enabled = info.RebuildItem;
 
-            // Visibility of menu items can't be changed so 
+            // Visibility of menu items can't be changed so
             // we need to recreate the context menu each time.
 
             // Context Menu
